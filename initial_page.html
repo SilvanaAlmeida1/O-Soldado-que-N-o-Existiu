@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+<div class="my-5"></div>
+<header class="masthead">
+    <div class="container h-100" src="\static\hoursCalc\imagesindex\masthead-bg.jpeg.svg">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center text-white">
+                <h1>BusRider</h1>
+                <p class="lead">One stop destination for your bus journey</p>
+                <div>
+                    <a class="btn btn-primary mx-2 my-2" href="{% url 'index' %}">Shifts</a>
+                    <a class="btn btn-light mx-2 my-2" href="{% url 'select' %}"> Filter</a>
+                    <a class="btn btn-light mx-2 my-2" href="{% url 'blog-home' %}"> Notice Board</a>
+                    <a class="btn btn-light mx-2 my-2" href="{% url 'todo_list' %}"> Tasks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2 class="text-center">Plan your Route</h2><img class="landing-icon d-block mx-auto my-4"
+                src="\static\hoursCalc\imagesindex\directions.svg">
+            <p class="h-25">
+                Our bus time-tables are always up to date. This means that you can use
+                our route-planning tool to plan the most-efficient route to your destination.
+            </p><a class="btn btn-primary d-none d-sm-block my-4" href="/directions/">Plan your route</a>
+        </div>
+
+        <div class="col-sm-4">
+            <h2 class="text-center">Book a Ticket</h2><img class="landing-icon d-block mx-auto my-4"
+                src="\static\hoursCalc\imagesindex\ticket.svg">
+            <p class="h-25">
+                With one click, you can book your journey from our site.
+                This will save you time and hassle in the bus so you can enjoy your ride.
+            </p><a class="btn btn-primary d-none d-sm-block my-4" href="/book/">Book a Ticket</a>
+        </div>
+
+        <div class="col-sm-4">
+            <h2 class="text-center">Track your Bus</h2><img class="landing-icon d-block mx-auto my-4"
+                src="\static\hoursCalc\imagesindex\location.svg">
+            <p class="h-25">
+                Bus is late? Track your bus live from our site.
+                Always know when your bus will arrive so you can be prepared.
+            </p><a class="btn btn-primary d-none d-sm-block my-4" href="/tracker/">Track your Bus</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
